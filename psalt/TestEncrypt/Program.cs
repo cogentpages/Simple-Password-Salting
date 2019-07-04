@@ -32,8 +32,21 @@ namespace TestEncrypt
             Console.WriteLine("Old Password: " + password);
             Console.WriteLine("New Password: " + saltPass.EncryptPassword(username, password));
 
+            Console.WriteLine("Testing update. Press Enter to proceed..");
+            Console.ReadLine();
+            Console.WriteLine("Updating...");
+
+            username = "User2";
+            password = "pass2";
+
+            Console.WriteLine("Encrypting password for User: " + username + "...");
+            Console.WriteLine("Old Password: " + password);
+            Console.WriteLine("New Password: " + saltPass.EncryptPassword(username, password, true));
+
             Console.WriteLine("done.");
             Console.ReadLine();
+
+
 
         }
     }
