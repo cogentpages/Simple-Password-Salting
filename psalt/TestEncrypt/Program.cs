@@ -9,7 +9,7 @@ namespace TestEncrypt
         {
             Console.WriteLine("Testing encryption. Press Enter to proceed..");
             Console.ReadLine();
-            var saltPass = new Psalt();
+            var saltPass = new Psalt("d:\\test");
 
             var username = "User";
             var password = "pass";

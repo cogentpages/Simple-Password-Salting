@@ -71,7 +71,7 @@ namespace psalt
 
         private string GenerateSalt()
         {
-            byte[] bytes = new byte[128 / 8];
+            byte[] bytes = new byte[16];
             using (var keyGenerator = RandomNumberGenerator.Create())
             {
                 keyGenerator.GetBytes(bytes);
@@ -100,6 +100,8 @@ namespace psalt
             SHA256CryptoServiceProvider hasher = new SHA256CryptoServiceProvider();
             return BitConverter.ToString(hasher.ComputeHash(encoder.GetBytes(newPassword))).Replace("-", "");
         }
+
+        
     }
 
     public class UserSalt
