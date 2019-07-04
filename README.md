@@ -23,7 +23,8 @@ public void AnyFunction(string username, string password)
 {
   var saltPass = new Psalt(<MySaltFilePath>); 
   //Path is optional. Salt file will be saved to the application's folder if not defined.
-  var encryptedPass = saltPass.EncryptPassword(username, password);
+  var encryptedPass = saltPass.EncryptPassword(username, password); // new or get existing
+  var updatePass = saltPass.EncryptPassword(username, password, true); // update existing
 }
 ```
 ## Decryption
@@ -32,7 +33,7 @@ It is my intention not to add decription, unless anybody can figure out how to. 
 ## TODO
 This project started as a simple password encryption, but I believe this can be expanded to a more decent solution online/offline for web and desktop development. Currently, what I am missing here and probably make it more usable are the following:
 - File encryption
-- Collection management, i.e. Remove unnecessary entries, update salt file, etc.
+- Collection management, i.e. Remove unnecessary entries, etc.
 - Nuget Package
 - Possible LINQ extension (?)
 
