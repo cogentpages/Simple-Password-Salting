@@ -1,4 +1,4 @@
-# Simple-Password-Salting
+# Simple Password Salting
 Simple Password Salting using Sha256.
 
 ## Why this project
