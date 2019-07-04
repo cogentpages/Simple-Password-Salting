@@ -28,7 +28,7 @@ public void AnyFunction(string username, string password)
 }
 ```
 ## Decryption
-It is my intention not to add decryp function, unless anybody can figure out how to. A smoothie cannot be brought back as fruit.
+It is my intention not to add decrypt function, unless anybody can figure out how to. A smoothie cannot be brought back as fruit.
 
 ## TODO
 This project started as a simple password encryption, but I believe this can be expanded to a more decent solution online/offline for web and desktop development. Currently, what I am missing here and probably make it more usable are the following:
