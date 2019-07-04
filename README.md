@@ -37,4 +37,4 @@ This project started as a simple password encryption, but I believe this can be 
 - Possible LINQ extension (?)
 
 ## FUTURE TODO
-hmm.... this will be another project
+hmm.... this will be on another project
