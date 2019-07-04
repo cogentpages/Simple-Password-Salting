@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "psalt", "psalt\psalt.csproj", "{2D76F460-136E-47AA-B930-47910E1EB21D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEncrypt", "TestEncrypt\TestEncrypt.csproj", "{AA935455-BA81-44C3-ADB7-4B3F5F87AC41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D76F460-136E-47AA-B930-47910E1EB21D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D76F460-136E-47AA-B930-47910E1EB21D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D76F460-136E-47AA-B930-47910E1EB21D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D76F460-136E-47AA-B930-47910E1EB21D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA935455-BA81-44C3-ADB7-4B3F5F87AC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA935455-BA81-44C3-ADB7-4B3F5F87AC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA935455-BA81-44C3-ADB7-4B3F5F87AC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA935455-BA81-44C3-ADB7-4B3F5F87AC41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D23115A-5CE3-4F2D-920E-0F41737FAB10}
+	EndGlobalSection
+EndGlobal
