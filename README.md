@@ -2,7 +2,7 @@
 Simple Password Salting using Sha256.
 
 ## Why this project
-People normally says "you do not need to reinvent the wheel" if it's already existing. True enough, but nobody says you cannot enhance nor improve the wheel, and this is the purpose of this project. The main purpose for now is to establish a concrete foundation of another bigger project. :)
+People normally says "you do not need to reinvent the wheel" if it's already existing. True enough, but nobody says you cannot enhance nor improve the wheel, and this is the reason why this project was created. The main purpose for now is to establish a concrete foundation of another bigger project. :)
 
 For now, you can use the codes anytime and update it at your own expense.
 
