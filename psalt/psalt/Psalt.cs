@@ -42,7 +42,7 @@ namespace psalt
             return userSalt;
         }
 
-        private void SetNewUserSalt(string userName, string newSalt)
+        private void SetUserSalt(string userName, string newSalt, bool update)
         {
             var userSalt = new UserSalt
             {
@@ -54,20 +54,24 @@ namespace psalt
 
             using(StreamWriter r = new StreamWriter(SaltPath, false))
             {
-                if(ExistingSalts == null)
-                {
-                    ExistingSalts = new List<UserSalt>
-                    {
-                        userSalt
-                    };
-                }
+                if (ExistingSalts == null)
+                    ExistingSalts = new List<UserSalt> { userSalt };
                 else
-                    ExistingSalts.Add(userSalt);
+                {
+                    var existingPair = ExistingSalts.Where(u => u.Username == userName).SingleOrDefault();
+
+                    if(existingPair == null && !update)
+                        ExistingSalts.Add(userSalt);
+
+                    if(existingPair != null && update)
+                        existingPair.Salt = newSalt;
+                }
 
                 r.WriteLine(JsonConvert.SerializeObject(ExistingSalts));
 
             }
         }
+
 
         private string GenerateSalt()
         {
@@ -84,16 +88,22 @@ namespace psalt
         /// </summary>
         /// <param name="username"></param>
         /// <param name="password"></param>
+        /// <param name="update"></param>
         /// <returns>Encrypted Password</returns>
-        public string EncryptPassword(string username, string password)
+        public string EncryptPassword(string username, string password, bool? update = false)
         {
-            var userSalt = GetUserSalt(username);
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                throw new Exception("User Name and Password are required");
 
-            if (string.IsNullOrEmpty(userSalt)){
-                userSalt = GenerateSalt();
-                SetNewUserSalt(username, userSalt);
+            var userSalt = GenerateSalt();
+
+            if(update.Value == false)
+            {
+                var existingSalt = GetUserSalt(username);
+                userSalt = string.IsNullOrEmpty(existingSalt) ? userSalt : existingSalt;
             }
-            
+
+            SetUserSalt(username, userSalt, update.Value);
             var newPassword = userSalt + password;
 
             UTF8Encoding encoder = new UTF8Encoding();
