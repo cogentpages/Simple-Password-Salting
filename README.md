@@ -4,13 +4,15 @@ Simple Password Salting using Sha256.
 ## Why this project
 People normally says "you do not need to reinvent the wheel" if it's already existing. True enough, but nobody says you cannot enhance nor improve the wheel, and this is the purpose of this project. The main purpose for now is to establish a concrete foundation of another bigger project. :)
 
+For now, you can use the codes anytime and update it at your own expense.
+
 ## What it Does
 - Generates and Retrieves Salts for each enrolled user
 - Generates JSON file, if not yet existing, to your prefered path
 - Generate hashed password.
 
 ## Usage
-1. Add the dll to your project reference.
+1. Add the dll to your project reference. You can download the compiled dll or compile the psalt project and add to your VS solution
 2. Add psalt to Usings
 3. Initialize Psalt. e.g.
 
@@ -24,7 +26,6 @@ public void AnyFunction(string username, string password)
   var encryptedPass = saltPass.EncryptPassword(username, password);
 }
 ```
-
 ## Decryption
 It is my intention not to add decription, unless anybody can figure out how to. A smoothie cannot be brought back as fruit.
 
@@ -32,6 +33,7 @@ It is my intention not to add decription, unless anybody can figure out how to. 
 This project started as a simple password encryption, but I believe this can be expanded to a more decent solution online/offline for web and desktop development. Currently, what I am missing here and probably make it more usable are the following:
 - File encryption
 - Collection management, i.e. Remove unnecessary entries, update salt file, etc.
+- Nuget Package
 - Possible LINQ extension (?)
 
 ## FUTURE TODO
