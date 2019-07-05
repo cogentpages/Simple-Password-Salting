@@ -1,0 +1,5 @@
+
+psalt/.vs/*
+psalt/psalt/obj/*
+psalt/TestEncrypt/obj/*
+*.user
