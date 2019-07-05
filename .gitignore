@@ -1,5 +1,11 @@
 
 psalt/.vs/*
 psalt/psalt/obj/*
-psalt/TestEncrypt/obj/*
+psalt/psalt/obj/Debug/*
+psalt/TestEncrypt/obj/*.*
 *.user
+*.cache
+psalt/psalt/obj/Debug/netcoreapp2.2/*.cache
+.vscode/*
+psalt/TestEncrypt/obj/Debug/netcoreapp2.2/*.cs
+psalt/TestEncrypt/obj/Debug/netcoreapp2.2/*.cache
